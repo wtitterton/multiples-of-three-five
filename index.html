@@ -1,0 +1,53 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			var r = [];
+			
+				function Divisible(num, arr,sum) {
+				 
+				  clearArr(arr);
+				  for ( var i = 0; i < 100; i++) {
+				    if (i % num === 0) 
+				    {
+				     
+				      r.push(i);
+				    
+				    }
+				  }
+
+				  var total = loopResults(r);
+				  return total;
+				 
+				}
+
+				function loopResults(arr) 
+				{
+				   var sum = 0;
+				  for (var j = 0; j < arr.length; j++) {
+
+				    sum += arr[j];
+
+				    
+				  }
+				  return sum;
+				}
+
+				function clearArr(arr)
+				{
+					while(arr.length > 0)
+					{
+						arr.pop();
+					}
+				}
+
+				
+
+				var result = Divisible(3, r);
+				console.log(result);
+				var result2 = Divisible(5, r);
+				console.log(result2);
+		</script>
+	</body>
+</html>
